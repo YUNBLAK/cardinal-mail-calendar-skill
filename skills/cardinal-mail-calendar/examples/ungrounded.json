@@ -1,0 +1,19 @@
+{
+  "now": "2026-11-10T16:00:00+00:00",
+  "timezone": "America/Los_Angeles",
+  "message": {
+    "subject": "[A3 TEST] Bluebird review",
+    "body": "Confirmed: Bluebird review on 2026-11-12 from 14:00 to 15:00 America/Los_Angeles.",
+    "received_at": "2026-11-10T16:00:00+00:00",
+    "truncated": false
+  },
+  "suggestion": {
+    "decision": "confirmed",
+    "title": "Bluebird review",
+    "date_text": "2026-11-12",
+    "start_text": "14:00",
+    "end_text": "17:00",
+    "timezone_text": "America/Los_Angeles",
+    "evidence": "Confirmed: Bluebird review on 2026-11-12 from 14:00 to 15:00 America/Los_Angeles."
+  }
+}
