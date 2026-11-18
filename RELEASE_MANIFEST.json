@@ -1,21 +1,14 @@
 {
-  "prepared_at": "2026-11-15T23:49:26.261407+00:00",
-  "published": true,
-  "standalone_checks": {
-    "confirmed": true,
-    "ambiguous": true,
-    "ungrounded": true
-  },
+  "repository": "https://github.com/YUNBLAK/cardinal-mail-calendar-skill",
+  "prepared_at": "2026-11-18T03:16:51.548863+00:00",
   "sha256": {
-    "README.md": "1255a6cfe7328c40ba673b4a98d4918fa2813125f5afbf6c956fc13ff801fbee",
-    "skills/cardinal-mail-calendar/requirements.txt": "bf63ef4c715a2acb88e2fb9cb0f0ffe543d42542288c4f3ff3599b0a1bcfce8f",
-    "skills/cardinal-mail-calendar/SKILL.md": "15334c90d32b7676c8af1a1f4bee5dadb41b8206582ddab058e2b1c4010d8fe7",
-    "skills/cardinal-mail-calendar/examples/ungrounded.json": "c406c5a2ec4e96f2eb07897ae558632740a5ab1627d229112314f7891c2b38ca",
-    "skills/cardinal-mail-calendar/examples/confirmed.json": "bfa3269d9aac966f59c94d5a0cf170808d591157e434d7a7ae56c967a35e4755",
+    "README.md": "3dc96bbb1347bc43ba7e6da342f7e8ebe4633f976c6f157f18e902fe8031128c",
+    "skills/cardinal-mail-calendar/SKILL.md": "9b40a248a0e16d26657a82e0902665697831b08780a9ebda289f88d0caf46176",
     "skills/cardinal-mail-calendar/examples/ambiguous.json": "aa173095a589122aa7fa5b961a031534f0c5d9d787b275ef5010b79f01e674e1",
+    "skills/cardinal-mail-calendar/examples/confirmed.json": "bfa3269d9aac966f59c94d5a0cf170808d591157e434d7a7ae56c967a35e4755",
+    "skills/cardinal-mail-calendar/examples/ungrounded.json": "c406c5a2ec4e96f2eb07897ae558632740a5ab1627d229112314f7891c2b38ca",
+    "skills/cardinal-mail-calendar/requirements.txt": "bf63ef4c715a2acb88e2fb9cb0f0ffe543d42542288c4f3ff3599b0a1bcfce8f",
     "skills/cardinal-mail-calendar/scripts/calendar_policy.py": "41c0d4d2487a4f1b492474ef0f5c794c4d331362ffa9b771a286013ba1f99566",
     "skills/cardinal-mail-calendar/scripts/validate.py": "ceb4330150c17326656d79dd6452cdf3134422919ef15a9e3308c944bb03af17"
-  },
-  "proposed_repository": "yunblack/cardinal-mail-calendar-skill",
-  "repository": "https://github.com/yunblack/cardinal-mail-calendar-skill"
+  }
 }
