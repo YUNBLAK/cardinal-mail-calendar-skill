@@ -1,31 +1,17 @@
-# Cardinal Mail to Calendar — Hermes skill
+# Cardinal Mail to Calendar
 
-Validate appointment candidates extracted from email before a host creates calendar events.
-A confirmed date and time must be grounded in an exact source quotation. Ambiguous or unsupported
-candidates return `review`; explicit non-events return `ignored`. The validator handles timezone
-conversion and reports its supported-format limits rather than inventing missing meeting details.
+A Hermes skill that validates meeting details extracted from email. It checks exact source quotes, dates, times and timezones, then returns `ready`, `review` or `ignored`.
 
-This portable skill has no mailbox credentials, network calls, calendar writes or notifications.
-The separate Cardinal application supplies those integrations. Installing this skill does not start
-automatic email polling. A `ready` result is validation, not proof of sender authenticity or permission
-to write an external calendar.
-
-## Install with Hermes
-
-Public tap: `yunblack/cardinal-mail-calendar-skill`. Use the repository-backed installation:
+## Install
 
 ```sh
-hermes skills tap add yunblack/cardinal-mail-calendar-skill
-hermes skills install yunblack/cardinal-mail-calendar-skill/skills/cardinal-mail-calendar
+hermes skills tap add YUNBLAK/cardinal-mail-calendar-skill
+hermes skills install YUNBLAK/cardinal-mail-calendar-skill/skills/cardinal-mail-calendar
 ```
-
-Record the installed `source_revision` from Hermes' skill lock as the immutable submission commit.
-A raw SKILL.md URL does not install the complete package. The full directory includes scripts, three
-examples and the pinned dependency.
 
 ## Run
 
-From the installed skill directory, use an isolated Python environment:
+From the installed `cardinal-mail-calendar` skill directory:
 
 ```sh
 python3 -m venv .venv
@@ -35,13 +21,10 @@ python3 -m venv .venv
 .venv/bin/python scripts/validate.py examples/ungrounded.json
 ```
 
-Expected statuses, in order: `ready`, `review`, `review`. The examples include an explicit fixed clock
-for reproducibility. For current data, omit `now` or supply the actual timezone-aware time. Inputs are
-`message`, `suggestion`, `timezone`, and optional `now`; see the example JSON files and SKILL.md.
+Expected results: `ready`, `review`, `review`. The examples use a fixed clock for repeatability. For current email, omit `now` or supply the actual timezone-aware time.
 
-## Attribution and evidence
+## Scope
 
-Original CS599 project work prepared by yunblack with OpenAI Codex assistance. The validator is
-extracted from the project's `calendar_policy.py`. Hermes is a separate Nous Research project and
-is not bundled here. The standalone examples have passed locally; a clean public installation and
-execution transcript will be recorded after publication. No public-installation success is claimed yet.
+Inputs are `message`, `suggestion`, `timezone` and optional `now`; see the example JSON files. The validator checks source-grounded, future appointments within 180 days, lasting 1 minute to 12 hours. Unsupported or incomplete details require review.
+
+The package performs validation only. Inbox access, calendar writes and notifications belong to the host application. A `ready` result does not authorize a calendar write.
